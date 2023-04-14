@@ -46,11 +46,22 @@ ul.main-page__header-breadcrumb {
     list-style: none;
     padding: 0;
     padding-left: 5px;
+    font-size: 10px;
 }
 
 ul.main-page__header-breadcrumb li {
     display: inline;
     color: rgba(var(--main-color), 0.5);
+}
+
+@media screen and (max-width: 989px){
+    ul.main-page__header-breadcrumb li {
+        display: none;
+    }
+
+    ul.main-page__header-breadcrumb li:last-child {
+        display: inline;
+    }
 }
 
 ul.main-page__header-breadcrumb li:last-child {
@@ -65,6 +76,12 @@ ul.main-page__header-breadcrumb li:last-child {
     border-radius: 5px;
     font-size: 10px;
     position: relative;
+}
+
+@media screen and (max-width: 989px) {
+    .main-page__header-search form {
+        max-width: 80px;
+    }
 }
 
 .main-page__header-search input {
@@ -95,6 +112,10 @@ ul.main-page__header-breadcrumb li:last-child {
 }
 
 /* --Main page pricing-- */
+.main-page__pricing {
+    padding: 20px;
+}
+
 .main-page__pricing-header {
     display: flex;
     flex-direction: column;
@@ -166,13 +187,13 @@ ul.main-page__header-breadcrumb li:last-child {
 }
 
 .star {
-    animation: star 5s linear infinite ;
-    -webkit-animation: star 5s linear infinite ;
+    animation: star 5s linear infinite;
+    -webkit-animation: star 5s linear infinite;
 }
 
 @keyframes star {
     from  { transform: rotate(0deg);}
-    to { transform: rotate(180deg);}
+    to { transform: rotate(360deg);}
 }
 
 .radio-button {
@@ -209,4 +230,12 @@ ul.main-page__header-breadcrumb li:last-child {
 .radio-button input[type='radio']:checked + label, .radio-button input[type='radio']:hover + label {
     background-color: #1C1C1C;
     color: #fff;
+}
+
+.pricing-header-title {
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
