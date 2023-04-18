@@ -74,7 +74,7 @@ meter {
 
 /* remove default dot (•) sign */
 ::marker {
-  content: initial;
+  content: none;
 }
 
 /* fix the feature of 'hidden' attribute.
