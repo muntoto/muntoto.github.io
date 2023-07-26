@@ -1,0 +1,261 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-color: #323334;
+}
+
+.container {
+    max-width: 1296px;
+}
+
+.header {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 'header-logo header-icon' 'header-nav header-nav' 'header-service header-service';
+    padding-top: 35px;
+    color: var(--main-color);
+}
+
+.header__logo {
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    grid-area: header-logo;
+}
+
+.header__icon {
+    grid-area: header-icon;
+}
+
+.header__icon ul {
+    display: flex;
+    gap: 37px;
+    justify-content: flex-end;
+}
+
+.header__icon ul li {
+    min-height: 32px;
+}
+
+.header__icon ul li img {
+    vertical-align: middle;
+}
+
+.header__nav {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 39px 0;
+    border-bottom: 1px #323334 solid;
+    border-top: 1px #323334 solid;
+    margin-top: 19px;
+    grid-area: header-nav;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 69px;
+    justify-content: center;
+}
+
+.header__service {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px;
+    grid-area: header-service;
+}
+
+.header__service ul {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+}
+
+.header__service ul li a img {
+    padding-right: 15px;
+}
+
+.nav-button {
+    display: none;
+    grid-area: nav-button;
+    margin: 0;
+    transform: translateY(20%);
+}
+
+.nav-button a img {
+    width: auto;
+    height: 16px;
+}
+
+.mobile-logo {
+    display: none;
+    grid-area: mobile-logo;
+    font-size: 16px;
+    font-weight: 700;
+    color: #323334;
+
+}
+
+@media screen and (max-width:989px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__service {
+        display: none;
+    }
+
+    .header__icon ul li img {
+        height: 16px;
+        width: auto;
+    }
+
+    .header__icon ul li:last-child {
+        display: none;
+    }
+
+    .header__icon ul li:first-child {
+        display: none;
+    }
+
+    .header {
+        grid-template-areas: 'mobile-logo header-icon nav-button';
+        padding: 20px 15px;
+        grid-template-columns: 1fr auto auto;
+        gap: 37px;
+    }
+
+    .nav-button {
+        display: block;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__icon {
+        height: 16px;
+        width: auto;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+}
+/* End header */
+
+/* Start Hero */
+.hero-section {
+    width: 100vw;
+    height: 566px;
+    background-color: #DBD0CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero__image {
+    width: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__image > img {
+    height: auto;
+    width: 80%;
+}
+
+.hero__text {
+    width: 50%;
+}
+
+.hero__text-title {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 65%;
+}
+
+.hero__text-title h3 {
+    font-size: 28px;
+}
+
+.hero__text span {
+    color: #A86A3D;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.button {
+    display: block;
+    min-width: 124px;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px #323334 solid;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    margin-left: 15px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width:989px) {
+
+    .hero__text-title {
+        width: 80%;
+    }
+
+    .hero__text-title h3 {
+        font-size: 14px;
+    }
+    .hero__text span {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        width: 100vw;
+        height: 290px;
+    }
+
+    .button {
+        margin-top: 8px;
+        margin-left: 0;
+    }
+}
+
+.hero__slider {
+
+}
+
+.hero__slider input {
+    visibility: hidden;
+    display: none;
+}
+
+.labels {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.labels label {
+    background-color: #ffffff;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+}
+
+.labels label:hover{
+    cursor: pointer;
+}
