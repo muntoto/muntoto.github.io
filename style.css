@@ -217,6 +217,8 @@
     color: #ffffff;
 }
 
+
+
 @media screen and (max-width:989px) {
 
     .hero__text-title {
@@ -261,8 +263,10 @@
     border-radius: 100%;
 }
 
-.labels label:hover {
+.labels label:hover{
     cursor: pointer;
+    background-color: #c4c4c4;
+    transition: all ease 0.3s;
 }
 
 /* End hero section */
@@ -308,7 +312,7 @@
 }
 
 @media screen and (max-width: 989px) {
-    .products{
+    .products {
         flex-wrap: wrap;
     }
 }
@@ -320,19 +324,33 @@
     grid-template-columns: repeat(4,1fr);
     height: 566px;
     gap: 23px;
+}
 
+.boho-chic-collection {
+    margin-top: 55px;
+}
+
+.decor-collection {
+    margin-top: 55px;
 }
 
 .collection__introduce {
-    background-image: url(./assets/decor.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-blend-mode: hue;
     background-clip: content-box;
     background-color: rgba(0,0,0,0.4);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.decor-collection .collection__introduce {
+    background-image: url("./assets/decor.png");
+}
+
+.boho-chic-collection .collection__introduce {
+    background-image: url("./assets/boho-chic.png");
 }
 
 .introduce-text {
@@ -381,10 +399,16 @@
     width: 232px;
     height: 56px;
     transform: translateX(25px);
-    
+    transition: all ease 0.3s;
+    opacity: 0.05;
+    box-shadow: 1px 1px 6px 0 #c1b1b1;
 }
 
-.favorite-button> ul {
+.favorite-button:hover {
+    opacity: 1;
+}
+
+.favorite-button > ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,13 +416,13 @@
     transform: translateY(9px);
 }
 
-.favorite-button> ul>li a img {
+.favorite-button > ul > li a img {
     height: 19px;
     width: auto;
     align-items: center;
     vertical-align: middle;
 }
 
-.favorite-button> ul> span {
+.favorite-button > ul > span {
     font-size: 30px;
 }
